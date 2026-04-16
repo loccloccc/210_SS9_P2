@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>RikkeiMall</title>
+</head>
+<body>
+
+<h2 th:text="${msg}">Chào khách lạ!</h2>
+
+<hr>
+
+<div th:each="p : ${products}">
+  <img th:src="@{${p.image}}" alt="product" width="200">
+  <h3 th:text="${p.name}">Tên sản phẩm</h3>
+  <p th:text="${p.price} + ' VNĐ'">100000</p>
+  <button>Thêm vào giỏ</button>
+  <hr>
+</div>
+
+</body>
+</html>
